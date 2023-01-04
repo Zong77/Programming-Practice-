@@ -1,0 +1,22 @@
+def n2d(num, n):
+    num = str(num)
+    num = "".join(reversed(num))
+    result = 0
+    for i in range(len(num)):
+        result += (n ** i) * int(num[i])
+    return result
+def d2n(num, n):
+    result = ""
+    while True:
+        result = str(num % n) + result
+        num = num // n
+        if num < n:
+            result = str(num) + result
+            break
+    return int(result)
+while True:
+    n, n1, n2 = input().split(",")
+    n = int(n)
+    n1 = int(n1)
+    n2 = int(n2)
+    print(d2n(n2d(n1, n) + n2d(n2, n), n))
