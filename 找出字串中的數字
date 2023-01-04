@@ -1,0 +1,10 @@
+def finddigital(s):
+    result = ""
+    for c in s:
+        if c.isdigit():
+            result = result + c
+    return result
+while True:
+    l = input().split(",")
+    for s in l:
+        print(finddigital(s))
