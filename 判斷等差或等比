@@ -1,0 +1,17 @@
+n = int(input())
+w = []
+for i in range(n):
+    w = input().split(",")
+    for j in range(len(w) - 2):
+        if int(w[j+1]) / int(w[j]) == int(w[j+2]) / int(w[j+1]) and int(w[j+1]) - int(w[j]) == int(w[j+2]) - int(w[j+1]):
+            print("皆是")
+            break
+        elif int(w[j+1]) / int(w[j]) == int(w[j+2]) / int(w[j+1]):
+            print("等比")
+            break
+        elif int(w[j+1]) - int(w[j]) == int(w[j+2]) - int(w[j+1]):
+            print("等差")
+            break
+        else:
+            print("皆不是")
+            break
