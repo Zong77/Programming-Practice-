@@ -1,0 +1,6 @@
+while True:
+    d ,x =map(int,input().split())
+    for a in range(0,1000):
+       for b in range(0,1000):
+           if(a-b== d and 6*(a-b)-(a+b)==x):
+                print(a,b)
