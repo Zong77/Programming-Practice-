@@ -1,0 +1,26 @@
+x = int(input())
+y = []
+y = input()
+sum = 0
+for i in range(x):
+    w = input().split(",")
+    for j in range(len(w)):
+        a = int(w[j]) - (int(w[j]) // 10000000 * 10000000)
+        b = a - (a // 1000000 * 1000000)
+        c = b - (b // 100000 * 100000)
+        d = c - (c // 10000 * 10000)
+        e = d - (d // 1000 * 1000)
+
+        if int(y) == int(w[j]):
+            sum += 1000000
+        elif a == int(y[1:]):
+            sum += 300000
+        elif b == int(y[2:]) :
+            sum  += 50000
+        elif c == int(y[3:]):
+            sum += 5000
+        elif d == int(y[4:]):
+            sum += 2000
+        elif e == int(y[5:]):
+            sum += 500
+print(sum)
